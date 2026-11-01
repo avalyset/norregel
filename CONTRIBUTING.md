@@ -11,4 +11,5 @@ Questions, error reports and suggestions are welcome as [Issues](https://github.
   requests.
 - **Tests:** run `python -m pytest -q -rs` before a pull request. Tests that need the closed items are skipped.
 
-By contributing you agree that your contribution is licensed under the licence of this repository (`LICENSE`).
+By contributing you agree that code contributions are licensed under the MIT licence (`LICENSE`) and documentation
+contributions under CC BY 4.0 (`LICENSE-docs`).

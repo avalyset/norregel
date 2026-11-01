@@ -7,7 +7,9 @@ authors:
     given-names: "Eirik"
     orcid: "https://orcid.org/0009-0001-9188-6788"
     affiliation: "EcoDeco AS"
-license: CC-BY-4.0
+license:
+  - MIT
+  - CC-BY-4.0
 repository-code: "https://github.com/avalyset/norregel"
 doi: "10.5281/zenodo.23422302"
 identifiers:

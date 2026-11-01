@@ -1,9 +1,11 @@
 norregel: licences and attribution
 
 This repository
-  The contents of this repository are licensed under the Creative Commons Attribution 4.0 International licence
-  (LICENSE), the licence of the norregel Zenodo records (concept DOI 10.5281/zenodo.23422302).
   Copyright (c) 2026 Eirik Botten Nicolaysen.
+  The code (src/, scripts/, tests/, examples/, borealis/*.py) is licensed under the MIT licence (LICENSE).
+  The documentation (docs/, README.md, CONTRIBUTING.md, NOTICE and the other text files) is licensed under the
+  Creative Commons Attribution 4.0 International licence (LICENSE-docs).
+  The archived versions on Zenodo (concept DOI 10.5281/zenodo.23422302) are published under CC BY 4.0.
 
 Data from Lovdata
   Inneholder data under Norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Stiftelsen Lovdata. (Contains data

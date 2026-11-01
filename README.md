@@ -27,7 +27,9 @@ in this repository** (see [Closed items](#closed-items)).
 - `src/norregel/`: the scorers (`score.py` for v1, `score_v2.py` for v2), the Lovdata document parser (`parse.py`) and the
   Inspect tasks.
 - `scripts/`: item building, the v1 and v2 analyses, the v2 run design and reporting scripts.
-- `tests/`: the deposited v2 analysis test; `conftest.py` skips the parts that need the closed items.
+- `tests/`: the deposited v2 analysis test and a test of the example; `conftest.py` skips the parts that need the
+  closed items.
+- `examples/`: a runnable example of the scorer on synthetic items.
 - `docs/`: preregistrations (v1, addendum, v2), run protocol, model lists, deviations, errata, results and the redaction
   notes, as deposited on Zenodo.
 - `borealis/`: the frozen files of the norregel × Borealis preregistration (run script, analysis, lock file, synthetic
@@ -55,12 +57,20 @@ python -m pip install numpy pytest
 python -m pytest -q -rs
 ```
 
-Without the closed items, two tests run and five are skipped with the reason shown.
+Without the closed items, three tests run (including the example) and five are skipped with the reason shown.
 
 ## Use
 
-The scorer can be used on its own, for example `from norregel import score_v2`, with `src` on the Python path. The
-classes and the rules are described in `docs/PREREG_V2.md`, `docs/PREREG_TILLEGG.md` and in the paper.
+The scorer can be used on its own, with `src` on the Python path. A runnable example scores invented answers to two
+synthetic items (`examples/demo_items.jsonl`; these are not norregel items):
+
+```bash
+PYTHONPATH=src python examples/demo.py
+```
+
+It prints one line per answer and the class counts `{'korrekt': 2, 'utdatert': 2, 'feil': 1, 'utolket': 1}`
+(correct, outdated, other error, uninterpreted); `tests/test_demo.py` runs it. The classes and the rules are described
+in `docs/PREREG_V2.md`, `docs/PREREG_TILLEGG.md` and in the paper.
 
 ## Reproducing v2 and the Borealis study
 
@@ -77,6 +87,9 @@ before it computes anything.
 
 ## Closed items
 
+The items are kept closed to avoid contamination: if they were public, they could end up in the training data of the
+models the benchmark is meant to test. They are available for research on request to eirik@ecodeco.no.
+
 The item files (`data/items.jsonl`, `data/items_h3.jsonl`, `data/items_h3_v2.jsonl`, `data/v3_items.jsonl`) are not
 published, so that the benchmark can still be used for evaluation; they are not in the Zenodo records either. The
 sha256 values of `items.jsonl` and `items_h3.jsonl` are in `LOCK_MANIFEST.md` and `docs/RUN_PROTOCOL.md`, that of
@@ -89,13 +102,14 @@ Inneholder data under Norsk lisens for offentlige data (NLOD) tilgjengeliggjort 
 
 ## Licence
 
-The contents of this repository are under the Creative Commons Attribution 4.0 International licence (`LICENSE`), the
-licence of the Zenodo records. See `NOTICE`.
+The code is under the MIT licence (`LICENSE`). The documentation (`docs/`, the README and the other text files) is under
+the Creative Commons Attribution 4.0 International licence (`LICENSE-docs`). The archived versions on Zenodo are
+published under CC BY 4.0. See `NOTICE`.
 
-## Feedback
+## Feedback and contact
 
 Use the [Issues](https://github.com/avalyset/norregel/issues) of this repository for questions, errors and suggestions.
-See `CONTRIBUTING.md`.
+See `CONTRIBUTING.md`. Contact: Eirik Botten Nicolaysen, eirik@ecodeco.no.
 
 ## Citation
 
