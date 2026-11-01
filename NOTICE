@@ -6,10 +6,13 @@ This repository
   Copyright (c) 2026 Eirik Botten Nicolaysen.
 
 Data from Lovdata
-  Inneholder data under Norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Stiftelsen Lovdata.
-  Licence: NLOD 2.0, https://data.norge.no/nlod/no/2.0. Source: https://api.lovdata.no/.
-  The items were derived from these data by norregel (extraction, chaining, question templates); these changes were
-  made by the author and are not Lovdata's responsibility. The item files are closed and are not in this repository.
+  Inneholder data under Norsk lisens for offentlige data (NLOD) tilgjengeliggjort av Stiftelsen Lovdata. (Contains data
+  under the Norwegian Licence for Open Government Data (NLOD) made available by Stiftelsen Lovdata.) Licence: NLOD 2.0,
+  https://data.norge.no/nlod/no/2.0. Source: https://api.lovdata.no/. The items were derived from these data by norregel
+  (extraction, chaining, question templates); these changes were made by the author and are not Lovdata's
+  responsibility.
+
+  The item files are closed and are not in this repository.
 
 Statutes and regulations
   The statutory texts are without protection under the Norwegian Copyright Act (lov 15. juni 2018 nr. 40) § 14 first

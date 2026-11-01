@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use norregel, please cite it as below."
-title: "norregel: a closed benchmark of dated numeric values in Norwegian statutes and regulations"
+title: "norregel: a closed benchmark of dated numeric values in Norwegian statutes, regulations and parliamentary decisions"
 type: software
 authors:
   - family-names: "Botten Nicolaysen"
