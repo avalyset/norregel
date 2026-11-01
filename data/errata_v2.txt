@@ -1,0 +1,1 @@
+# Items som er ført i docs/ERRATA.md etter at v2 ble låst (én id per linje). Tom ved låsing.

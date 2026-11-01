@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use norregel, please cite it as below."
+title: "norregel: a closed benchmark of dated numeric values in Norwegian statutes and regulations"
+type: software
+authors:
+  - family-names: "Botten Nicolaysen"
+    given-names: "Eirik"
+    orcid: "https://orcid.org/0009-0001-9188-6788"
+    affiliation: "EcoDeco AS"
+license: CC-BY-4.0
+repository-code: "https://github.com/avalyset/norregel"
+doi: "10.5281/zenodo.23422302"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23422302"
+    description: "norregel, all versions (concept DOI)"
+  - type: doi
+    value: "10.5281/zenodo.23437444"
+    description: "norregel v2.0, preregistration of v2"
+  - type: doi
+    value: "10.5281/zenodo.23858965"
+    description: "norregel × Borealis, preregistration"
+preferred-citation:
+  type: article
+  title: "norregel: a preregistered benchmark of dated numeric values in Norwegian law"
+  authors:
+    - family-names: "Botten Nicolaysen"
+      given-names: "Eirik"
+      orcid: "https://orcid.org/0009-0001-9188-6788"
+      affiliation: "EcoDeco AS"
+  year: 2026
+  url: "https://arxiv.org/abs/2610.29207"
+  identifiers:
+    - type: other
+      value: "arXiv:2610.29207"

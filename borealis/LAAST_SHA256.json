@@ -1,0 +1,5 @@
+{
+ "scripts/analysis_v2.py": "616945e48218d06367b88000f601353d5a42b835d24ca38a7e61ff11ebfe3be0",
+ "src/norregel/score_v2.py": "ca888abfc7186284e7c24f63ad273298ec50bf1c90476a27de3f4cdb52b1f769",
+ "scripts/norm_aar_maaneder.py": "9a87d205687215305ca28caf8d1724ce014792efbd7ecb1236bf2575fb9ecba5"
+}

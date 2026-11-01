@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# The closed item files are never committed.
+data/items*.jsonl
+data/v3_items.jsonl
+logs/

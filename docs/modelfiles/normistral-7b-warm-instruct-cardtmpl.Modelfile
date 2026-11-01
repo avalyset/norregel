@@ -1,0 +1,13 @@
+# A2 (docs/RUN_PROTOCOL.md): NorMistral-7b-warm-instruct with the chat template of the model card.
+# Same weights as hf.co/ltg/normistral-7b-warm-instruct:Q4_K_M (blob sha256:ed1f173921eea691b44ec8a7324079ff4c800046a9e2b396bdfd410449305088);
+# only the template differs. The card and the GGUF chat_template write «<|im_start|> user» with a space after the tag;
+# the template Ollama derived for the registered model writes «<|im_start|>user».
+# Rendered prompt for one user message Q:  "<|im_start|> user\nQ<|im_end|>\n<|im_start|> assistant\n"
+# Stop sequences are the same as on the registered model. No system prompt, no other parameters.
+FROM hf.co/ltg/normistral-7b-warm-instruct:Q4_K_M
+TEMPLATE """{{- range .Messages }}<|im_start|> {{ .Role }}
+{{ .Content }}<|im_end|>
+{{ end }}<|im_start|> assistant
+"""
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"

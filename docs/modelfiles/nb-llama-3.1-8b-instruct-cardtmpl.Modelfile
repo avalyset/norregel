@@ -1,0 +1,26 @@
+# A3 (docs/RUN_PROTOCOL.md): NB-Llama-3.1-8B-Instruct (Q4_K_M) with the chat template of the model card, pinned.
+# Same weights as nb-llama-3.1-8b:latest (blob sha256:6d72cb0a1d18c300564be44d57c06ce1203f05d465d90735f2402e447d6490e9 =
+# NbAiLab/nb-llama-3.1-8B-Instruct-Q4_K_M-GGUF, nb-llama-3.1-8b-instruct-q4_k_m.gguf). Only the template differs.
+# Card (GGUF tokenizer.chat_template, Llama 3.1 format), no system or tool message given, default date_string:
+#   <|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|>
+#   <|start_header_id|>user<|end_header_id|>\n\n{question}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n
+# Why: Ollama 0.35.1 renders the GGUF's own template (log line «template selection ... selected=gguf_chat_template»,
+# because the GGUF template has the «tools» capability and the Go template has not), with the CURRENT date
+# («Today Date: 16 Oct 2026», which would change at midnight during a run) and without the <|begin_of_text|> token
+# (the GGUF has no add_bos_token key, so no BOS is added). This Go template is only used by an Ollama instance
+# started with OLLAMA_GO_TEMPLATE=1 (log: «selected=go_template»); the A3 run therefore uses its own instance on
+# port 11435 (scripts/run_nbllama_a3.sh). Rendered prompt and token ids are checked before the first sample:
+# the ids start with 128000 (<|begin_of_text|>) once, then 128006 (<|start_header_id|>).
+# Stop sequences and the sampling parameters baked into nb-llama-3.1-8b:latest (seed 42, temperature 0, top_k 1, top_p 1)
+# are inherited unchanged. Valid for the benchmark's calls: one user message, no system or tool message.
+FROM nb-llama-3.1-8b:latest
+TEMPLATE """<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+<|eot_id|>{{ range .Messages }}<|start_header_id|>{{ .Role }}<|end_header_id|>
+
+{{ .Content }}<|eot_id|>{{ end }}<|start_header_id|>assistant<|end_header_id|>
+
+"""
