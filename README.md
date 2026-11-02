@@ -20,7 +20,8 @@ in this repository** (see [Closed items](#closed-items)).
 | norregel v2.1 (results of v2) | [10.5281/zenodo.23502580](https://doi.org/10.5281/zenodo.23502580) |
 | norregel paper | [arXiv:2610.29207](https://arxiv.org/abs/2610.29207) |
 | norregel × Borealis, preregistration | [10.5281/zenodo.23858965](https://doi.org/10.5281/zenodo.23858965) |
-| norregel × Borealis, results record | 10.5281/zenodo.23870450 (reserved; not yet published) |
+| norregel × Borealis, results record | [10.5281/zenodo.23870450](https://doi.org/10.5281/zenodo.23870450) |
+| norregel × Borealis, paper | submitted to arXiv |
 
 ## Contents
 
@@ -80,7 +81,7 @@ in `docs/PREREG_V2.md`, `docs/PREREG_TILLEGG.md` and in the paper.
   its later versions; the lock is `LOCK_V2.md` in those records.
 - **Borealis:** the frozen run script, analysis and manifest are in `borealis/` and in the preregistration
   10.5281/zenodo.23858965. The code for the results (operator script, (b) run copies, descriptive and report scripts)
-  will be in the results record when it is published.
+  is in the results record 10.5281/zenodo.23870450.
 
 Both need the closed item files. The Borealis analysis checks the sha256 of `data/items.jsonl` against the manifest
 before it computes anything.
