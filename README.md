@@ -20,8 +20,8 @@ in this repository** (see [Closed items](#closed-items)).
 | norregel v2.1 (results of v2) | [10.5281/zenodo.23502580](https://doi.org/10.5281/zenodo.23502580) |
 | norregel paper | [arXiv:2610.29207](https://arxiv.org/abs/2610.29207) |
 | norregel × Borealis, preregistration | [10.5281/zenodo.23858965](https://doi.org/10.5281/zenodo.23858965) |
-| norregel × Borealis, results record | [10.5281/zenodo.23870450](https://doi.org/10.5281/zenodo.23870450) |
-| norregel × Borealis, paper | submitted to arXiv |
+| norregel × Borealis, results record (all versions) | [10.5281/zenodo.23870449](https://doi.org/10.5281/zenodo.23870449) |
+| norregel × Borealis, paper | [arXiv:2611.02334](https://arxiv.org/abs/2611.02334): *Outdated numeric values from Norwegian statutes and regulations in a further-trained model and its base model: a preregistered paired comparison of Borealis 2 and Gemma 4* |
 
 ## Contents
 
@@ -81,7 +81,7 @@ in `docs/PREREG_V2.md`, `docs/PREREG_TILLEGG.md` and in the paper.
   its later versions; the lock is `LOCK_V2.md` in those records.
 - **Borealis:** the frozen run script, analysis and manifest are in `borealis/` and in the preregistration
   10.5281/zenodo.23858965. The code for the results (operator script, (b) run copies, descriptive and report scripts)
-  is in the results record 10.5281/zenodo.23870450.
+  is in the results record 10.5281/zenodo.23870449 (all versions).
 
 Both need the closed item files. The Borealis analysis checks the sha256 of `data/items.jsonl` against the manifest
 before it computes anything.
